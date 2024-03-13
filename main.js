@@ -1,30 +1,20 @@
-var frutas = ['maçã', 'banana', 'laranja'];
-frutas.push('laranja');
-console.log(frutas); // Output será ['maçã', 'banana', 'laranja']
+var frutas = ["Banana", "Maçã", "Laranja", "Abacaxi"];
 
-var frutas = ['maçã', 'banana', 'laranja'];
-var ultimaFruta = frutas.pop();
-console.log(ultimaFruta); // Output será 'laranja'
-console.log(frutas); // Output será ['maçã', 'banana']
+frutas.sort();
+console.log(frutas); // Output será ["Abacaxi", "Banana", "Laranja", "Maçã"]
 
-var frutas = ['maçã', 'banana', 'laranja'];
-var primeiraFruta = frutas.shift();
-console.log(primeiraFruta); // Output será 'maçã'
-console.log(frutas); // Output será ['banana', 'laranja']
 
-var frutas = ['banana', 'laranja'];
-frutas.unshift('maçã');
-console.log(frutas); // Output será ['maçã', 'banana', 'laranja']
+var pessoas = [
+  { nome: "Ana", idade: 25 },
+  { nome: "Carlos", idade: 30 },
+  { nome: "João", idade: 20 },
+  { nome: "Maria", idade: 35 }
+];
 
-var frutas = ['maçã', 'banana'];
-var outrasFrutas = ['laranja', 'morango'];
-var todasFrutas = frutas.concat(outrasFrutas);
-console.log(todasFrutas); // Output será ['maçã', 'banana', 'laranja', 'morango']
+// Usando o método sort() com uma função de comparação para ordenar as pessoas por idade
+pessoas.sort(function(a, b) {
+  return a.idade - b.idade;
+});
 
-var frutas = ['maçã', 'banana', 'laranja', 'morango'];
-var algumasFrutas = frutas.slice(1, 3);
-console.log(algumasFrutas); // Output será ['banana', 'laranja']
+console.log(pessoas);
 
-var frutas = ['maçã', 'banana', 'laranja', 'morango'];
-frutas.splice(2, 1, 'uva', 'pêra');
-console.log(frutas); // Output será ['maçã', 'banana', 'uva', 'pêra', 'morango']
