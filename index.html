@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Fundamentals - Exemplo de Eventos</title>
+</head>
+
+<button onclick="minhaFuncao()">Clique em mim!</button>
+
+<body>
+
+<button id="meuBotao">Clique em mim!</button>
+
+<script>
+    // Selecionando o botão
+    var botao = document.getElementById('meuBotao');
+
+    // Adicionando um ouvinte de evento para o clique no botão
+    botao.addEventListener('click', function() {
+        alert('JS Fundamentals');
+    });
+</script>
+
+</body>
+</html>
