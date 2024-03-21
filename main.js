@@ -1,21 +1,13 @@
-var frutas = ["Banana", "Maçã", "Laranja", "Abacaxi"];
+let dataAtual = new Date();
 
-frutas.sort();
-console.log(frutas); // Output será ["Abacaxi", "Banana", "Laranja", "Maçã"]
+// Obter o dia da semana 
+//(0 para Domingo, 1 para Segunda-feira, ..., 6 para Sábado)
+let diaDaSemana = dataAtual.getDay();
+console.log(diaDaSemana);
 
 
-var pessoas = [
-  { nome: "Ana", idade: 25 },
-  { nome: "Carlos", idade: 30 },
-  { nome: "João", idade: 20 },
-  { nome: "Maria", idade: 35 }
-];
-
-// Usando o método sort() com uma função de comparação para ordenar as pessoas por idade
-pessoas.sort(function(a, b) {
-  return a.idade - b.idade;
-});
-
-console.log(pessoas);
-
+// Convertendo uma data UTC para o horário local
+let dataUTCString = '2024-03-21T12:30:00Z';
+let dataLocalConvertida = new Date(dataUTCString);
+console.log(dataLocalConvertida);
 
