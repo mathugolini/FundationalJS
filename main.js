@@ -1,32 +1,51 @@
-for (inicialização; condição; expressão final) {
-  // bloco de código a ser repetido
-}
+// Selecionando um elemento pelo ID
+const elemento = document.getElementById('meuElemento');
 
-for (let i=0; i<=5; i++) {
-  console.log(i);
-}
+// Selecionando elementos pela classe
+const elementos = document.getElementsByClassName('minhaClasse');
 
-for (let i = 0; i <= 5; i++) {
-  if (i === 3) {
-    continue; // Pula a iteração quando i é igual a 3
-  }
-  console.log(i);
-  if (i === 4) {
-    break; // Termina o loop quando i é igual a 4
-  }
-}
+// Selecionando elementos pelo nome da tag
+const paragrafos = document.getElementsByTagName('p');
 
-let matriz = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9]
-];
+// Selecionando o primeiro elemento que corresponde a um seletor CSS
+const primeiroElemento = document.querySelector('.minhaClasse');
 
-for (let i=0; i<matriz.length; i++) {
-  for (let j=0; i<matriz[i].length; j++) {
-    console.log(matriz[i][j]);
-  }
-}
+
+// Alterando o conteúdo de um elemento
+elemento.innerHTML = 'Novo conteúdo';
+
+// Alterando o estilo de um elemento
+elemento.style.color = 'red';
+
+// Adicionando uma classe a um elemento
+elemento.classList.add('novaClasse');
+
+// Alterando um atributo
+elemento.setAttribute('nome', 'novoValor');
+
+
+
+
+
+elemento.addEventListener('click', function() {
+  console.log('O elemento foi clicado');
+});
+
+// Criando um novo elemento
+const novoElemento = document.createElement('div');
+
+// Adicionando o novo elemento ao DOM
+document.body.appendChild(novoElemento);
+
+// Removendo um elemento do DOM
+const elementoParaRemover = document.getElementById('elementoParaRemover');
+elementoParaRemover.parentNode.removeChild(elementoParaRemover);
+
+
+
+
+
+
 
 
 
